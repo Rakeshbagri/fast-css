@@ -1,0 +1,29 @@
+top:50%; left:50%;
+transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+-moz-transform: translate(-50%, -50%);
+-o-transform: translate(-50%, -50%);
+position:absolute;
+min-width:100%; min-height:100%; width:100; max-width:100%;
+
+
+
+top bottom
+
+top:50%; left:0%;
+transform: translate(0%, -50%);
+-webkit-transform: translate(0%, -50%);
+-moz-transform: translate(0%, -50%);
+-o-transform: translate(0%, -50%);
+position:absolute;
+width:100%;  
+
+
+left right 
+
+top:0%; left:50%;
+transform: translate(-50%, 0%);
+-webkit-transform: translate(-50%, 0%);
+-moz-transform: translate(-50%, 0%);
+-o-transform: translate(-50%, 0%);
+position:absolute;
