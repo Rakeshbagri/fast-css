@@ -1,0 +1,8 @@
+#iphone me input par click karne par zoom site ko resolve kaise kare
+
+
+add this meta tag
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0"/>
+  
+  https://www.lucysboutique.co.uk/
