@@ -3,8 +3,14 @@
 
 
 .v-center {
+display: -webkit-box; 
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex; 
 display: flex;
-flex-wrap: wrap;
-align-items: center;
+ -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+ -webkit-align-items: center; 
+  align-items: center; 
 
 }
