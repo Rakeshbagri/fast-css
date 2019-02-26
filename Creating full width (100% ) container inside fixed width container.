@@ -1,0 +1,20 @@
+HTML
+
+ <div class="container" style="width: 750px; margin: 0 auto;">
+
+<div class="row-full">
+     --- Full width container ---
+</div>
+
+</div>
+
+CSS 
+
+.row-full{
+ width: 100vw;
+ position: relative;
+ margin-left: -50vw;
+ height: 100px;
+ margin-top: 100px;
+ left: 50%;
+}
