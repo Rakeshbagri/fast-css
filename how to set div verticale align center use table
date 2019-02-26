@@ -1,2 +1,10 @@
 .home-image-content-section .contet-image-block { display:table-cell; vertical-align:middle; }
 .content{ display:table; height:100%; vertical-align:middle; }
+
+
+.v-center {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+
+}
