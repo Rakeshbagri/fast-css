@@ -1,0 +1,17 @@
+ add this script
+ 
+ <script type="text/javascript">
+        jQuery(document).ready(function($) {
+
+           $("input,textarea").focus(function(){
+             $(this).parent().addClass("focused");
+
+            }).blur(function(){
+                 $val  = $(this).val();
+                 if(!$val){
+                 $(this).parent().removeClass("focused");
+                 }
+            })
+
+          });
+      </script>
