@@ -19,3 +19,24 @@
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+
+------------ hover border effect width incress effect ------------------
+
+.site-nav__label:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid #606060;
+ transition: width 0.5s ease;
+    -o-transition: width 0.5s ease;
+   -moz-transition: width 0.5s ease;
+  -webkit-transition: width 0.5s ease;
+  
+   
+}
+.site-nav__label:hover:after {
+    width: 100%;
+}
