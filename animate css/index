@@ -12,6 +12,9 @@ add css and js in head
 js
 https://raw.githubusercontent.com/graingert/WOW/master/src/WOW.js
   
+  
+    {{ 'animate.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'wow.js' | asset_url }}"></script>
   <script>
       var wow = new WOW(
         {
