@@ -4,6 +4,10 @@ https://daneden.github.io/animate.css/
 https://github.com/matthieua/WOW
 https://wowjs.uk/
 
+   <script src="//code.jquery.com/jquery-3.4.1.js"></script>
+    
+    
+    
 
 add css and js in head
 
@@ -14,7 +18,9 @@ https://raw.githubusercontent.com/graingert/WOW/master/src/WOW.js
   
   
     {{ 'animate.css' | asset_url | stylesheet_tag }}
-    <script src="{{ 'wow.js' | asset_url }}"></script>
+    
+    <script src="{{ 'wow.min.js' | asset_url }}"></script>
+    
   <script>
       var wow = new WOW(
         {
