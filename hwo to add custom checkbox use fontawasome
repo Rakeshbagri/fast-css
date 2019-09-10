@@ -1,0 +1,19 @@
+    <div class="checkbox_icon">
+      <input type="checkbox" name="customer[agree]" id="agree" required="required" />
+      <span> <i class="fal fa-check"></i> </span>
+      </div>
+      
+      
+      /*  css  */
+
+.checkbox_icon { margin-right:10px; margin-top:2px; position:relative; }
+.checkbox_icon i { display:none; line-height:24px; }
+.checkbox_icon input { position:absolute; opacity:0;  top:0px; left:0px; width:100%; height:100%; }
+
+.checkbox_icon span { border:#287880 2px solid;     -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px; width:24px; height:24px; display:block; text-align:center; }
+
+.checkbox_icon input:checked + span { background:#287880; color:#fff; }
+
+.checkbox_icon input:checked + span i { display:block; }
