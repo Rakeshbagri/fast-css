@@ -1,5 +1,4 @@
 
-
 <div class="multiple-dess">
 
   {% for block in section.blocks %}
@@ -85,7 +84,8 @@
 
             </div>
 
-            {% endif %}	                  
+            {% endif %}	
+<!-- add to cart -->
 
           </div>
         </div>
@@ -172,7 +172,7 @@
             </div>
 
             {% endif %}	                
-
+<!-- add to cart -->
           </div>
         </div>
       </div>
@@ -220,12 +220,8 @@
             {% endif %}							
 
 
-            {% if block.settings.featured_product-3 != blank %}
-
-
-            {%- assign product = all_products[block.settings.featured_product-3] -%}        
-
-
+  {% if block.settings.featured_product-3 != blank %}
+  {%- assign product = all_products[block.settings.featured_product-3] -%}        
             {%- assign collection_handles = product.collections | map: 'handle' -%}
             {% if product.empty? %}
             {%- assign section_onboarding = true -%}
@@ -263,7 +259,7 @@
 
 
                     {% if product.selected_or_first_available_variant.available %}
-                    <button type="submit" style="color:{{ block.settings.color_2 }}; border-color:{{ block.settings.color_2 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
+                    <button type="submit" style="color:{{ block.settings.color_3 }}; border-color:{{ block.settings.color_3 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
                     {% else %}
                     <button type="submit" class="button button--secondary button--no-disabled-opacity" disabled="disabled">{{ 'product.labels.sold_out' | t }}</button>
                     {% endif %}
@@ -273,7 +269,10 @@
 
             </div>
 
-            {% endif %}	              
+            {% endif %}	   
+            <!-- add to cart -->
+            
+            
           </div>
         </div>
       </div>
@@ -308,6 +307,58 @@
             {% endif %}							
 
 
+            {% if block.settings.featured_product-4 != blank %}
+  {%- assign product = all_products[block.settings.featured_product-4] -%}        
+            {%- assign collection_handles = product.collections | map: 'handle' -%}
+            {% if product.empty? %}
+            {%- assign section_onboarding = true -%}
+            {% else %}
+            {%- assign section_onboarding = false -%}
+            {% endif %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product"
+                 class="product-{{ product.id }} "
+                 data-slideshow-animation="{{section.settings.slideshow_animation}}"
+                 data-block-id="{{block.id}}"
+                 {{ block.shopify_attributes }}>
+
+
+
+              <div class="product-details half">
+
+                <form class="product__form" id="product{{ product.id }}__form" action="/cart/add" method="POST">
+                  <div class="product__variants">
+                    {% if product.variants.size > 1 %}
+                    <div class="form__control">
+                      <div class="styled-select">
+                        <select id="product-select-{{ product.id }}" name="id">
+                          {% for variant in product.variants %}
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    {% else %}
+                    <input type="hidden" name="id" data-sku="{{ product.selected_or_first_available_variant.sku }}" value="{{ product.selected_or_first_available_variant.id }}">
+                    {% endif %}
+                  </div>
+
+                  <div class="product__buy">
+
+
+                    {% if product.selected_or_first_available_variant.available %}
+                    <button type="submit" style="color:{{ block.settings.color_4 }}; border-color:{{ block.settings.color_4 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
+                    {% else %}
+                    <button type="submit" class="button button--secondary button--no-disabled-opacity" disabled="disabled">{{ 'product.labels.sold_out' | t }}</button>
+                    {% endif %}
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            {% endif %}	   
+            <!-- add to cart -->
+            
 
           </div>
         </div>
@@ -356,6 +407,58 @@
             {% endif %}							
 
 
+              {% if block.settings.featured_product-5 != blank %}
+  {%- assign product = all_products[block.settings.featured_product-5] -%}        
+            {%- assign collection_handles = product.collections | map: 'handle' -%}
+            {% if product.empty? %}
+            {%- assign section_onboarding = true -%}
+            {% else %}
+            {%- assign section_onboarding = false -%}
+            {% endif %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product"
+                 class="product-{{ product.id }} "
+                 data-slideshow-animation="{{section.settings.slideshow_animation}}"
+                 data-block-id="{{block.id}}"
+                 {{ block.shopify_attributes }}>
+
+
+
+              <div class="product-details half">
+
+                <form class="product__form" id="product{{ product.id }}__form" action="/cart/add" method="POST">
+                  <div class="product__variants">
+                    {% if product.variants.size > 1 %}
+                    <div class="form__control">
+                      <div class="styled-select">
+                        <select id="product-select-{{ product.id }}" name="id">
+                          {% for variant in product.variants %}
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    {% else %}
+                    <input type="hidden" name="id" data-sku="{{ product.selected_or_first_available_variant.sku }}" value="{{ product.selected_or_first_available_variant.id }}">
+                    {% endif %}
+                  </div>
+
+                  <div class="product__buy">
+
+
+                    {% if product.selected_or_first_available_variant.available %}
+                    <button type="submit" style="color:{{ block.settings.color_5 }}; border-color:{{ block.settings.color_5 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
+                    {% else %}
+                    <button type="submit" class="button button--secondary button--no-disabled-opacity" disabled="disabled">{{ 'product.labels.sold_out' | t }}</button>
+                    {% endif %}
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            {% endif %}	   
+            <!-- add to cart -->
+            
 
           </div>
         </div>
@@ -390,7 +493,57 @@
             </a>
             {% endif %}             
 
+  {% if block.settings.featured_product-6 != blank %}
+  {%- assign product = all_products[block.settings.featured_product-6] -%}        
+            {%- assign collection_handles = product.collections | map: 'handle' -%}
+            {% if product.empty? %}
+            {%- assign section_onboarding = true -%}
+            {% else %}
+            {%- assign section_onboarding = false -%}
+            {% endif %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product"
+                 class="product-{{ product.id }} "
+                 data-slideshow-animation="{{section.settings.slideshow_animation}}"
+                 data-block-id="{{block.id}}"
+                 {{ block.shopify_attributes }}>
 
+
+
+              <div class="product-details half">
+
+                <form class="product__form" id="product{{ product.id }}__form" action="/cart/add" method="POST">
+                  <div class="product__variants">
+                    {% if product.variants.size > 1 %}
+                    <div class="form__control">
+                      <div class="styled-select">
+                        <select id="product-select-{{ product.id }}" name="id">
+                          {% for variant in product.variants %}
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    {% else %}
+                    <input type="hidden" name="id" data-sku="{{ product.selected_or_first_available_variant.sku }}" value="{{ product.selected_or_first_available_variant.id }}">
+                    {% endif %}
+                  </div>
+
+                  <div class="product__buy">
+
+
+                    {% if product.selected_or_first_available_variant.available %}
+                    <button type="submit" style="color:{{ block.settings.color_6 }}; border-color:{{ block.settings.color_6 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
+                    {% else %}
+                    <button type="submit" class="button button--secondary button--no-disabled-opacity" disabled="disabled">{{ 'product.labels.sold_out' | t }}</button>
+                    {% endif %}
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            {% endif %}	   
+            <!-- add to cart -->
 
           </div>
         </div>
@@ -438,7 +591,57 @@
             </a>
             {% endif %}             
 
+  {% if block.settings.featured_product-7 != blank %}
+  {%- assign product = all_products[block.settings.featured_product-7] -%}        
+            {%- assign collection_handles = product.collections | map: 'handle' -%}
+            {% if product.empty? %}
+            {%- assign section_onboarding = true -%}
+            {% else %}
+            {%- assign section_onboarding = false -%}
+            {% endif %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product"
+                 class="product-{{ product.id }} "
+                 data-slideshow-animation="{{section.settings.slideshow_animation}}"
+                 data-block-id="{{block.id}}"
+                 {{ block.shopify_attributes }}>
 
+
+
+              <div class="product-details half">
+
+                <form class="product__form" id="product{{ product.id }}__form" action="/cart/add" method="POST">
+                  <div class="product__variants">
+                    {% if product.variants.size > 1 %}
+                    <div class="form__control">
+                      <div class="styled-select">
+                        <select id="product-select-{{ product.id }}" name="id">
+                          {% for variant in product.variants %}
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    {% else %}
+                    <input type="hidden" name="id" data-sku="{{ product.selected_or_first_available_variant.sku }}" value="{{ product.selected_or_first_available_variant.id }}">
+                    {% endif %}
+                  </div>
+
+                  <div class="product__buy">
+
+
+                    {% if product.selected_or_first_available_variant.available %}
+                    <button type="submit" style="color:{{ block.settings.color_7 }}; border-color:{{ block.settings.color_7 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
+                    {% else %}
+                    <button type="submit" class="button button--secondary button--no-disabled-opacity" disabled="disabled">{{ 'product.labels.sold_out' | t }}</button>
+                    {% endif %}
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            {% endif %}	   
+            <!-- add to cart -->
 
           </div>
         </div>
@@ -474,7 +677,58 @@
             </a>
             {% endif %}             
 
+  {% if block.settings.featured_product-8 != blank %}
+  {%- assign product = all_products[block.settings.featured_product-8] -%}        
+            {%- assign collection_handles = product.collections | map: 'handle' -%}
+            {% if product.empty? %}
+            {%- assign section_onboarding = true -%}
+            {% else %}
+            {%- assign section_onboarding = false -%}
+            {% endif %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product"
+                 class="product-{{ product.id }} "
+                 data-slideshow-animation="{{section.settings.slideshow_animation}}"
+                 data-block-id="{{block.id}}"
+                 {{ block.shopify_attributes }}>
 
+
+
+              <div class="product-details half">
+
+                <form class="product__form" id="product{{ product.id }}__form" action="/cart/add" method="POST">
+                  <div class="product__variants">
+                    {% if product.variants.size > 1 %}
+                    <div class="form__control">
+                      <div class="styled-select">
+                        <select id="product-select-{{ product.id }}" name="id">
+                          {% for variant in product.variants %}
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    {% else %}
+                    <input type="hidden" name="id" data-sku="{{ product.selected_or_first_available_variant.sku }}" value="{{ product.selected_or_first_available_variant.id }}">
+                    {% endif %}
+                  </div>
+
+                  <div class="product__buy">
+
+
+                    {% if product.selected_or_first_available_variant.available %}
+                    <button type="submit" style="color:{{ block.settings.color_8 }}; border-color:{{ block.settings.color_8 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
+                    {% else %}
+                    <button type="submit" class="button button--secondary button--no-disabled-opacity" disabled="disabled">{{ 'product.labels.sold_out' | t }}</button>
+                    {% endif %}
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            {% endif %}	   
+            <!-- add to cart -->
+            
 
           </div>
         </div>
@@ -522,6 +776,58 @@
             </a>
             {% endif %}             
 
+            
+              {% if block.settings.featured_product-9 != blank %}
+  {%- assign product = all_products[block.settings.featured_product-9] -%}        
+            {%- assign collection_handles = product.collections | map: 'handle' -%}
+            {% if product.empty? %}
+            {%- assign section_onboarding = true -%}
+            {% else %}
+            {%- assign section_onboarding = false -%}
+            {% endif %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product"
+                 class="product-{{ product.id }} "
+                 data-slideshow-animation="{{section.settings.slideshow_animation}}"
+                 data-block-id="{{block.id}}"
+                 {{ block.shopify_attributes }}>
+
+
+
+              <div class="product-details half">
+
+                <form class="product__form" id="product{{ product.id }}__form" action="/cart/add" method="POST">
+                  <div class="product__variants">
+                    {% if product.variants.size > 1 %}
+                    <div class="form__control">
+                      <div class="styled-select">
+                        <select id="product-select-{{ product.id }}" name="id">
+                          {% for variant in product.variants %}
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    {% else %}
+                    <input type="hidden" name="id" data-sku="{{ product.selected_or_first_available_variant.sku }}" value="{{ product.selected_or_first_available_variant.id }}">
+                    {% endif %}
+                  </div>
+
+                  <div class="product__buy">
+
+
+                    {% if product.selected_or_first_available_variant.available %}
+                    <button type="submit" style="color:{{ block.settings.color_9 }}; border-color:{{ block.settings.color_9 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
+                    {% else %}
+                    <button type="submit" class="button button--secondary button--no-disabled-opacity" disabled="disabled">{{ 'product.labels.sold_out' | t }}</button>
+                    {% endif %}
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            {% endif %}	   
+            <!-- add to cart -->
 
 
           </div>
@@ -556,7 +862,57 @@
               {{ block.settings.button-text-10 }}
             </a>
             {% endif %}             
+  {% if block.settings.featured_product-10 != blank %}
+  {%- assign product = all_products[block.settings.featured_product-10] -%}        
+            {%- assign collection_handles = product.collections | map: 'handle' -%}
+            {% if product.empty? %}
+            {%- assign section_onboarding = true -%}
+            {% else %}
+            {%- assign section_onboarding = false -%}
+            {% endif %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product"
+                 class="product-{{ product.id }} "
+                 data-slideshow-animation="{{section.settings.slideshow_animation}}"
+                 data-block-id="{{block.id}}"
+                 {{ block.shopify_attributes }}>
 
+
+
+              <div class="product-details half">
+
+                <form class="product__form" id="product{{ product.id }}__form" action="/cart/add" method="POST">
+                  <div class="product__variants">
+                    {% if product.variants.size > 1 %}
+                    <div class="form__control">
+                      <div class="styled-select">
+                        <select id="product-select-{{ product.id }}" name="id">
+                          {% for variant in product.variants %}
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    {% else %}
+                    <input type="hidden" name="id" data-sku="{{ product.selected_or_first_available_variant.sku }}" value="{{ product.selected_or_first_available_variant.id }}">
+                    {% endif %}
+                  </div>
+
+                  <div class="product__buy">
+
+
+                    {% if product.selected_or_first_available_variant.available %}
+                    <button type="submit" style="color:{{ block.settings.color_10 }}; border-color:{{ block.settings.color_10 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
+                    {% else %}
+                    <button type="submit" class="button button--secondary button--no-disabled-opacity" disabled="disabled">{{ 'product.labels.sold_out' | t }}</button>
+                    {% endif %}
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            {% endif %}	   
+            <!-- add to cart -->
 
 
           </div>
@@ -604,7 +960,57 @@
               {{ block.settings.button-text-11 }}
             </a>
             {% endif %}             
+  {% if block.settings.featured_product-11 != blank %}
+  {%- assign product = all_products[block.settings.featured_product-11] -%}        
+            {%- assign collection_handles = product.collections | map: 'handle' -%}
+            {% if product.empty? %}
+            {%- assign section_onboarding = true -%}
+            {% else %}
+            {%- assign section_onboarding = false -%}
+            {% endif %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product"
+                 class="product-{{ product.id }} "
+                 data-slideshow-animation="{{section.settings.slideshow_animation}}"
+                 data-block-id="{{block.id}}"
+                 {{ block.shopify_attributes }}>
 
+
+
+              <div class="product-details half">
+
+                <form class="product__form" id="product{{ product.id }}__form" action="/cart/add" method="POST">
+                  <div class="product__variants">
+                    {% if product.variants.size > 1 %}
+                    <div class="form__control">
+                      <div class="styled-select">
+                        <select id="product-select-{{ product.id }}" name="id">
+                          {% for variant in product.variants %}
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    {% else %}
+                    <input type="hidden" name="id" data-sku="{{ product.selected_or_first_available_variant.sku }}" value="{{ product.selected_or_first_available_variant.id }}">
+                    {% endif %}
+                  </div>
+
+                  <div class="product__buy">
+
+
+                    {% if product.selected_or_first_available_variant.available %}
+                    <button type="submit" style="color:{{ block.settings.color_11 }}; border-color:{{ block.settings.color_11 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
+                    {% else %}
+                    <button type="submit" class="button button--secondary button--no-disabled-opacity" disabled="disabled">{{ 'product.labels.sold_out' | t }}</button>
+                    {% endif %}
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            {% endif %}	   
+            <!-- add to cart -->
 
 
           </div>
@@ -619,8 +1025,8 @@
 
 
   <!-- new block -->   
-  {% if block.settings.image-11 != blank %}
-  <div class="home-imagebox1" style="color:{{ block.settings.color_11 }} !important; background-color:{{ block.settings.bg_11 }}!important;">
+  {% if block.settings.image-12 != blank %}
+  <div class="home-imagebox1" style="color:{{ block.settings.color_12 }} !important; background-color:{{ block.settings.bg_12 }}!important;">
 
     <div class="wrapper">
 
@@ -628,19 +1034,69 @@
       <div class="grid__item one-half content">
         <div class="large--display-table">
           <div class="large--display-table-cell">
-            {% if block.settings.tittle-11 != blank %} 
-            <h3 style="color:{{ block.settings.color_11 }};"> {{ block.settings.tittle-11 }} </h3> 
+            {% if block.settings.tittle-12 != blank %} 
+            <h3 style="color:{{ block.settings.color_12 }};"> {{ block.settings.tittle-12 }} </h3> 
             {% endif %}
-            {% if block.settings.text-11 != blank %}
-            <p style="color:{{ block.settings.color_11 }};">  {{ block.settings.text-11 }} </p>
+            {% if block.settings.text-12 != blank %}
+            <p style="color:{{ block.settings.color_12 }};">  {{ block.settings.text-12 }} </p>
             {% endif %}
-            {% if block.settings.button-text-11 != blank %}
-            <a class="btn btn--regular pop-1 btn--outline btn--light" href="{{ block.settings.url-11 }}" style="color:{{ block.settings.color_11 }}; border-color:{{ block.settings.color_11 }};"> 
-              {{ block.settings.button-text-11 }}
+            {% if block.settings.button-text-12 != blank %}
+            <a class="btn btn--regular pop-1 btn--outline btn--light" href="{{ block.settings.url-12 }}" style="color:{{ block.settings.color_12 }}; border-color:{{ block.settings.color_12 }};"> 
+              {{ block.settings.button-text-12 }}
             </a>
             {% endif %}             
 
+  {% if block.settings.featured_product-12 != blank %}
+  {%- assign product = all_products[block.settings.featured_product-12] -%}        
+            {%- assign collection_handles = product.collections | map: 'handle' -%}
+            {% if product.empty? %}
+            {%- assign section_onboarding = true -%}
+            {% else %}
+            {%- assign section_onboarding = false -%}
+            {% endif %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product"
+                 class="product-{{ product.id }} "
+                 data-slideshow-animation="{{section.settings.slideshow_animation}}"
+                 data-block-id="{{block.id}}"
+                 {{ block.shopify_attributes }}>
 
+
+
+              <div class="product-details half">
+
+                <form class="product__form" id="product{{ product.id }}__form" action="/cart/add" method="POST">
+                  <div class="product__variants">
+                    {% if product.variants.size > 1 %}
+                    <div class="form__control">
+                      <div class="styled-select">
+                        <select id="product-select-{{ product.id }}" name="id">
+                          {% for variant in product.variants %}
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    {% else %}
+                    <input type="hidden" name="id" data-sku="{{ product.selected_or_first_available_variant.sku }}" value="{{ product.selected_or_first_available_variant.id }}">
+                    {% endif %}
+                  </div>
+
+                  <div class="product__buy">
+
+
+                    {% if product.selected_or_first_available_variant.available %}
+                    <button type="submit" style="color:{{ block.settings.color_12 }}; border-color:{{ block.settings.color_12 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
+                    {% else %}
+                    <button type="submit" class="button button--secondary button--no-disabled-opacity" disabled="disabled">{{ 'product.labels.sold_out' | t }}</button>
+                    {% endif %}
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            {% endif %}	   
+            <!-- add to cart -->
 
           </div>
         </div>
@@ -648,8 +1104,8 @@
 
       <div class="grid__item one-half img">
         <div class="img-part">
-          {% if block.settings.image-11 != blank %}
-          <img src="{{ block.settings.image-11 | img_url: "800x800" }}" />
+          {% if block.settings.image-12 != blank %}
+          <img src="{{ block.settings.image-12 | img_url: "800x800" }}" />
           {% endif %}
 
         </div>
@@ -687,7 +1143,57 @@
               {{ block.settings.button-text-13 }}
             </a>
             {% endif %}             
+  {% if block.settings.featured_product-13 != blank %}
+  {%- assign product = all_products[block.settings.featured_product-13] -%}        
+            {%- assign collection_handles = product.collections | map: 'handle' -%}
+            {% if product.empty? %}
+            {%- assign section_onboarding = true -%}
+            {% else %}
+            {%- assign section_onboarding = false -%}
+            {% endif %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product"
+                 class="product-{{ product.id }} "
+                 data-slideshow-animation="{{section.settings.slideshow_animation}}"
+                 data-block-id="{{block.id}}"
+                 {{ block.shopify_attributes }}>
 
+
+
+              <div class="product-details half">
+
+                <form class="product__form" id="product{{ product.id }}__form" action="/cart/add" method="POST">
+                  <div class="product__variants">
+                    {% if product.variants.size > 1 %}
+                    <div class="form__control">
+                      <div class="styled-select">
+                        <select id="product-select-{{ product.id }}" name="id">
+                          {% for variant in product.variants %}
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    {% else %}
+                    <input type="hidden" name="id" data-sku="{{ product.selected_or_first_available_variant.sku }}" value="{{ product.selected_or_first_available_variant.id }}">
+                    {% endif %}
+                  </div>
+
+                  <div class="product__buy">
+
+
+                    {% if product.selected_or_first_available_variant.available %}
+                    <button type="submit" style="color:{{ block.settings.color_13 }}; border-color:{{ block.settings.color_13 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
+                    {% else %}
+                    <button type="submit" class="button button--secondary button--no-disabled-opacity" disabled="disabled">{{ 'product.labels.sold_out' | t }}</button>
+                    {% endif %}
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            {% endif %}	   
+            <!-- add to cart -->
 
 
           </div>
@@ -702,8 +1208,8 @@
 
 
   <!-- new block -->   
-  {% if block.settings.image-13 != blank %}
-  <div class="home-imagebox1" style="color:{{ block.settings.color_13 }} !important; background-color:{{ block.settings.bg_13 }}!important;">
+  {% if block.settings.image-14 != blank %}
+  <div class="home-imagebox1" style="color:{{ block.settings.color_14 }} !important; background-color:{{ block.settings.bg_14 }}!important;">
 
     <div class="wrapper">
 
@@ -711,19 +1217,69 @@
       <div class="grid__item one-half content">
         <div class="large--display-table">
           <div class="large--display-table-cell">
-            {% if block.settings.tittle-13 != blank %} 
-            <h3 style="color:{{ block.settings.color_13 }};"> {{ block.settings.tittle-13 }} </h3> 
+            {% if block.settings.tittle-14 != blank %} 
+            <h3 style="color:{{ block.settings.color_14 }};"> {{ block.settings.tittle-14 }} </h3> 
             {% endif %}
-            {% if block.settings.text-13 != blank %}
-            <p style="color:{{ block.settings.color_13 }};">  {{ block.settings.text-13 }} </p>
+            {% if block.settings.text-14 != blank %}
+            <p style="color:{{ block.settings.color_14 }};">  {{ block.settings.text-14 }} </p>
             {% endif %}
-            {% if block.settings.button-text-13 != blank %}
-            <a class="btn btn--regular pop-1 btn--outline btn--light" href="{{ block.settings.url-13 }}" style="color:{{ block.settings.color_13 }}; border-color:{{ block.settings.color_13 }};"> 
-              {{ block.settings.button-text-13 }}
+            {% if block.settings.button-text-14 != blank %}
+            <a class="btn btn--regular pop-1 btn--outline btn--light" href="{{ block.settings.url-14 }}" style="color:{{ block.settings.color_14 }}; border-color:{{ block.settings.color_14 }};"> 
+              {{ block.settings.button-text-14 }}
             </a>
             {% endif %}             
 
+  {% if block.settings.featured_product-14 != blank %}
+  {%- assign product = all_products[block.settings.featured_product-14] -%}        
+            {%- assign collection_handles = product.collections | map: 'handle' -%}
+            {% if product.empty? %}
+            {%- assign section_onboarding = true -%}
+            {% else %}
+            {%- assign section_onboarding = false -%}
+            {% endif %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product"
+                 class="product-{{ product.id }} "
+                 data-slideshow-animation="{{section.settings.slideshow_animation}}"
+                 data-block-id="{{block.id}}"
+                 {{ block.shopify_attributes }}>
 
+
+
+              <div class="product-details half">
+
+                <form class="product__form" id="product{{ product.id }}__form" action="/cart/add" method="POST">
+                  <div class="product__variants">
+                    {% if product.variants.size > 1 %}
+                    <div class="form__control">
+                      <div class="styled-select">
+                        <select id="product-select-{{ product.id }}" name="id">
+                          {% for variant in product.variants %}
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    {% else %}
+                    <input type="hidden" name="id" data-sku="{{ product.selected_or_first_available_variant.sku }}" value="{{ product.selected_or_first_available_variant.id }}">
+                    {% endif %}
+                  </div>
+
+                  <div class="product__buy">
+
+
+                    {% if product.selected_or_first_available_variant.available %}
+                    <button type="submit" style="color:{{ block.settings.color_14 }}; border-color:{{ block.settings.color_14 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
+                    {% else %}
+                    <button type="submit" class="button button--secondary button--no-disabled-opacity" disabled="disabled">{{ 'product.labels.sold_out' | t }}</button>
+                    {% endif %}
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            {% endif %}	   
+            <!-- add to cart -->
 
           </div>
         </div>
@@ -731,8 +1287,8 @@
 
       <div class="grid__item one-half img">
         <div class="img-part">
-          {% if block.settings.image-13 != blank %}
-          <img src="{{ block.settings.image-13 | img_url: "800x800" }}" />
+          {% if block.settings.image-14 != blank %}
+          <img src="{{ block.settings.image-14 | img_url: "800x800" }}" />
           {% endif %}
 
         </div>
@@ -771,7 +1327,57 @@
             </a>
             {% endif %}             
 
+  {% if block.settings.featured_product-15 != blank %}
+  {%- assign product = all_products[block.settings.featured_product-15] -%}        
+            {%- assign collection_handles = product.collections | map: 'handle' -%}
+            {% if product.empty? %}
+            {%- assign section_onboarding = true -%}
+            {% else %}
+            {%- assign section_onboarding = false -%}
+            {% endif %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product"
+                 class="product-{{ product.id }} "
+                 data-slideshow-animation="{{section.settings.slideshow_animation}}"
+                 data-block-id="{{block.id}}"
+                 {{ block.shopify_attributes }}>
 
+
+
+              <div class="product-details half">
+
+                <form class="product__form" id="product{{ product.id }}__form" action="/cart/add" method="POST">
+                  <div class="product__variants">
+                    {% if product.variants.size > 1 %}
+                    <div class="form__control">
+                      <div class="styled-select">
+                        <select id="product-select-{{ product.id }}" name="id">
+                          {% for variant in product.variants %}
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    {% else %}
+                    <input type="hidden" name="id" data-sku="{{ product.selected_or_first_available_variant.sku }}" value="{{ product.selected_or_first_available_variant.id }}">
+                    {% endif %}
+                  </div>
+
+                  <div class="product__buy">
+
+
+                    {% if product.selected_or_first_available_variant.available %}
+                    <button type="submit" style="color:{{ block.settings.color_15 }}; border-color:{{ block.settings.color_15 }};" class="button btn btn--regular pop-1 btn--outline btn--light button--primary button--no-disabled-opacity" {% if settings.cart_page != 'page' %}data-action="add-to-cart"{% endif %}>{{ 'product.general.add_to_cart' | t }}</button>
+                    {% else %}
+                    <button type="submit" class="button button--secondary button--no-disabled-opacity" disabled="disabled">{{ 'product.labels.sold_out' | t }}</button>
+                    {% endif %}
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            {% endif %}	   
+            <!-- add to cart -->
 
           </div>
         </div>
@@ -1513,6 +2119,3 @@
 {% javascript %}
 {% endjavascript %}
 
-
-
-https://cuticlelisse.com/pages/demo
