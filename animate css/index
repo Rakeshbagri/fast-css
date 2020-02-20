@@ -46,3 +46,41 @@ https://raw.githubusercontent.com/graingert/WOW/master/src/WOW.js
   <section class="wow slideInRight" data-wow-offset="10"  data-wow-iteration="10"></section>
   
   
+  --------------- cdn files -------------
+  
+   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+ 
+<body>
+ 
+   <section class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s"> fsa sa </section>
+  <section class="wow slideInRight" data-wow-offset="10"  data-wow-iteration="10"> sfa a</section>
+  
+  <div class="wow bounceInUp">
+                  Content to Reveal Here
+                  </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    
+        <script>
+      var wow = new WOW(
+        {
+          boxClass:     'wow',      // animated element css class (default is wow)
+          animateClass: 'animated', // animation css class (default is animated)
+          offset:       100,          // distance to the element when triggering the animation (default is 0)
+          mobile:       true,       // trigger animations on mobile devices (default is true)
+          live:         true,       // act on asynchronously loaded content (default is true)
+          callback:     function(box) {
+            // the callback is fired every time an animation is started
+            // the argument that is passed in is the DOM node being animated
+          },
+          scrollContainer: null,    // optional scroll container selector, otherwise use window,
+          resetAnimation: true,     // reset animation on end (default is true)
+        }
+      );
+      wow.init();
+    </script>
+
+</body>
