@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
+@import url('https://web.archive.org/web/20220624121159cs_/https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
 h1, h2, h3, h4, h5, h6, p, span, body, input{
 	/*font-family: 'Raleway', sans-serif !important;*/
     font-family: Arial, Helvetica, sans-serifb !important;
@@ -131,7 +131,7 @@ footer.page-footer .pagesFooter textarea {
 header.page-header {
     margin: 0;
     padding: 0;
-    background: url(../images/headerbg.jpg);
+    background: url(/web/20220624121159im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/images/headerbg.jpg);
     background-position: left bottom;
 }
 .panel.header .top_left a {
@@ -2350,3 +2350,25 @@ overflow-y: hidden;
 .catalog-category-view .sidebar.sidebar-main{position:inherit;}
 
 }
+/*
+     FILE ARCHIVED ON 12:11:59 Jun 24, 2022 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:20:49 Aug 05, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 92.069
+  exclusion.robots: 0.078
+  exclusion.robots.policy: 0.072
+  cdx.remote: 0.062
+  esindex: 0.009
+  LoadShardBlock: 62.281 (3)
+  PetaboxLoader3.datanode: 117.242 (5)
+  CDXLines.iter: 12.572 (3)
+  load_resource: 115.809
+  PetaboxLoader3.resolve: 43.562
+  loaddict: 27.086
+*/
