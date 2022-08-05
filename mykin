@@ -1256,8 +1256,8 @@ header .minicart-wrapper .block-minicart {
 }
 
 header .block-minicart .block-content > .actions > .primary .action.primary {
-    display: block;
-    width: 100%; margin-bottom: 10px;
+    display: inline-block;
+    width: auto;
     font-size: 14px;
     float: left;
 }
@@ -1273,13 +1273,13 @@ header .minicart-items-wrapper {
         margin: 0 -15px;
 }
 
-/*
+
 header .block-minicart .block-content > .actions .paypal-logo {
     float: right;
     width: 150px;
     margin-top: 8px;
 }
-*/
+
 header .block-minicart .block-content > .actions .paypal-logo  input[type="image"] {
     width: 143px;
 }
@@ -2350,5 +2350,3 @@ overflow-y: hidden;
 .catalog-category-view .sidebar.sidebar-main{position:inherit;}
 
 }
-
-
