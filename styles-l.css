@@ -2755,29 +2755,29 @@
   }
   @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/opensans/light/opensans-300.eot');
-    src: url('../fonts/opensans/light/opensans-300.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/light/opensans-300.woff2') format('woff2'), url('../fonts/opensans/light/opensans-300.woff') format('woff'), url('../fonts/opensans/light/opensans-300.ttf') format('truetype'), url('../fonts/opensans/light/opensans-300.svg#Open Sans') format('svg');
+    src: url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/light/opensans-300.eot');
+    src: url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/light/opensans-300.eot#iefix') format('embedded-opentype'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/light/opensans-300.woff2') format('woff2'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/light/opensans-300.woff') format('woff'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/light/opensans-300.ttf') format('truetype'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/light/opensans-300.svg#Open Sans') format('svg');
     font-weight: 300;
     font-style: normal;
   }
   @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/opensans/regular/opensans-400.eot');
-    src: url('../fonts/opensans/regular/opensans-400.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/regular/opensans-400.woff2') format('woff2'), url('../fonts/opensans/regular/opensans-400.woff') format('woff'), url('../fonts/opensans/regular/opensans-400.ttf') format('truetype'), url('../fonts/opensans/regular/opensans-400.svg#Open Sans') format('svg');
+    src: url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/regular/opensans-400.eot');
+    src: url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/regular/opensans-400.eot#iefix') format('embedded-opentype'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/regular/opensans-400.woff2') format('woff2'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/regular/opensans-400.woff') format('woff'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/regular/opensans-400.ttf') format('truetype'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/regular/opensans-400.svg#Open Sans') format('svg');
     font-weight: 400;
     font-style: normal;
   }
   @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/opensans/semibold/opensans-600.eot');
-    src: url('../fonts/opensans/semibold/opensans-600.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/semibold/opensans-600.woff2') format('woff2'), url('../fonts/opensans/semibold/opensans-600.woff') format('woff'), url('../fonts/opensans/semibold/opensans-600.ttf') format('truetype'), url('../fonts/opensans/semibold/opensans-600.svg#Open Sans') format('svg');
+    src: url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/semibold/opensans-600.eot');
+    src: url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/semibold/opensans-600.eot#iefix') format('embedded-opentype'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/semibold/opensans-600.woff2') format('woff2'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/semibold/opensans-600.woff') format('woff'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/semibold/opensans-600.ttf') format('truetype'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/semibold/opensans-600.svg#Open Sans') format('svg');
     font-weight: 600;
     font-style: normal;
   }
   @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/opensans/bold/opensans-700.eot');
-    src: url('../fonts/opensans/bold/opensans-700.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/bold/opensans-700.woff2') format('woff2'), url('../fonts/opensans/bold/opensans-700.woff') format('woff'), url('../fonts/opensans/bold/opensans-700.ttf') format('truetype'), url('../fonts/opensans/bold/opensans-700.svg#Open Sans') format('svg');
+    src: url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/bold/opensans-700.eot');
+    src: url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/bold/opensans-700.eot#iefix') format('embedded-opentype'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/bold/opensans-700.woff2') format('woff2'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/bold/opensans-700.woff') format('woff'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/bold/opensans-700.ttf') format('truetype'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/opensans/bold/opensans-700.svg#Open Sans') format('svg');
     font-weight: 700;
     font-style: normal;
   }
@@ -3187,7 +3187,7 @@
     position: absolute;
   }
   .load.indicator:before {
-    background: transparent url('../images/loader-2.gif') no-repeat 50% 50%;
+    background: transparent url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/images/loader-2.gif') no-repeat 50% 50%;
     border-radius: 5px;
     height: 160px;
     width: 160px;
@@ -3484,7 +3484,7 @@
     -moz-appearance: none;
     -ms-appearance: none;
     appearance: none;
-    background: #ffffff url('../images/select-bg.svg') no-repeat 100% 45%;
+    background: #ffffff url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/images/select-bg.svg') no-repeat 100% 45%;
     background-size: 30px 60px;
     border:1px solid #eee;
     height:40px;
@@ -3648,8 +3648,8 @@
   }
   @font-face {
     font-family: 'luma-icons';
-    src: url('../fonts/Luma-Icons.eot');
-    src: url('../fonts/Luma-Icons.eot?#iefix') format('embedded-opentype'), url('../fonts/Luma-Icons.woff2') format('woff2'), url('../fonts/Luma-Icons.woff') format('woff'), url('../fonts/Luma-Icons.ttf') format('truetype'), url('../fonts/Luma-Icons.svg#luma-icons') format('svg');
+    src: url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/Luma-Icons.eot');
+    src: url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/Luma-Icons.eot#iefix') format('embedded-opentype'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/Luma-Icons.woff2') format('woff2'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/Luma-Icons.woff') format('woff'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/Luma-Icons.ttf') format('truetype'), url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/fonts/Luma-Icons.svg#luma-icons') format('svg');
     font-weight: normal;
     font-style: normal;
   }
@@ -4536,7 +4536,7 @@
     display: inline-block;
   }
   .braintree-paypal-account:before {
-    background-image: url('../Magento_Braintree/images/paypal-small.png');
+    background-image: url('/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/Magento_Braintree/images/paypal-small.png');
     background-position-x: 0;
     background-position-y: 0;
     line-height: 16px;
@@ -4829,7 +4829,7 @@
     padding: 10px 0 0;
   }
   .fotorama-video-container:after {
-    background: url(../Magento_ProductVideo/img/gallery-sprite.png) bottom right;
+    background: url(/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/Magento_ProductVideo/img/gallery-sprite.png) bottom right;
     bottom: 0;
     content: '';
     height: 100px;
@@ -4850,7 +4850,7 @@
     transform: scale(1.25);
   }
   .video-thumb-icon:after {
-    background: url(../Magento_ProductVideo/img/gallery-sprite.png) bottom left;
+    background: url(/web/20220624121158im_/https://mykin.com/pub/static/version1584041335/frontend/Mykin/mykininc/en_US/Magento_ProductVideo/img/gallery-sprite.png) bottom left;
     bottom: 0;
     content: '';
     height: 40px;
@@ -13006,3 +13006,25 @@
       width: 33.33333333%;
     }
   }
+/*
+     FILE ARCHIVED ON 12:11:58 Jun 24, 2022 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:34:03 Aug 05, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 763.465
+  exclusion.robots: 0.111
+  exclusion.robots.policy: 0.1
+  cdx.remote: 0.08
+  esindex: 0.011
+  LoadShardBlock: 173.106 (3)
+  PetaboxLoader3.resolve: 163.558 (4)
+  PetaboxLoader3.datanode: 71.278 (5)
+  CDXLines.iter: 15.23 (3)
+  load_resource: 77.676
+  loaddict: 36.321
+*/
